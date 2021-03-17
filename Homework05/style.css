@@ -1,0 +1,58 @@
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+svg {
+  width:100%;
+  height:100%;
+  float: left;
+}
+
+
+text {
+  fill: black;
+  stroke: none;
+  position: relative;
+  left: 20%;
+  top: 3%;
+  font-family: 'futura';
+}
+
+.label {
+  font-size: 1.5em;
+}
+
+path {
+  /* fill: none; */
+  stroke: black;
+  stroke-width: 2px;
+}
+.tick {
+  fill: black;
+  stroke: black;
+}
+
+circle {
+  opacity: 0.9;
+  stroke: none;
+  /* fill: red; */
+}
+
+.line {
+  fill: none;
+  stroke: #e00007;
+  stroke-width: 1px;
+}
+
+.line2 {
+  fill: none;
+  stroke: #e00007;
+  stroke-width: 2px;
+}
+
+/* .line2 {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
+} */
