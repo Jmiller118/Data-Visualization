@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<style>
+	text {
+            font-family: 'Yanone Kaffeesatz', sans-serif;
+            font-size: 10px;
+            text-anchor: middle;
+            fill: blue;
+        }
+        circle {
+            stroke-width: .5px;
+            opacity: .8;
+        }
+	.bar-chart {
+            border: solid 1px gray;
+            width: 800px;
+        }
+        .bar {
+            height: 20px;
+            fill: orange;
+        }
+	
+
+
+</style>
+ <section> 
+	<h1> Domain Abstraction </h1>
+	<p> The potential users of this UI include anyone who is interested in understanding 
+	how the populations of countries are ranked compared to other countries.
+	This UI would also be useful for users who are 
+	interested in examining the birthrate and death rate of a 
+	specific country. </p>
+</section>	
+
+<section>	
+	<h1> Data Abstraction </h1>
+	<p> The data type of this dataset the CSV file provided. </p>
+	
+	<p> The hierarchical graph data has a quantitative attribute. It can 
+	be shown to measure how large the population is of each country and
+	compare them to one another. This a sequential ordering direction
+	because there is minimum range of population and there is maximum range
+	for the population.  The grouped bar chart also has this 
+	quantitative attribute allowing for the birthrate and death rate to
+	be measured against each other for the chosen country. </p>
+	
+	<p> There was preprocessing that took place in order to make 
+	the graph readable. First, a second file was created
+	with just the countries birthrates and death rates that 
+	is used in the "linkedGraph" file. Second,
+	when drawing the hierarchical graph, some countries did not 
+	have a population, birthrate, or deathrate listed
+	and these caused the graph to throw errors. These were removed 
+	because of this reason. Fourth, the continent the
+	country is on was used instead of region to allow for less 
+	sections to be created on the hierarchical graph. </p>
+</section>
+
+<section>	
+	<h1> Task Abstraction </h1>
+	<p> The two tasks supported are the visual representation of the 
+	population of the country and being able to compare the birthrate and
+	death rate of the chosen country. </p>
+
+	<p> The hierarchical graph supports the low-level query action, target
+	pair. By having an overall view of each country, the user can then
+	target the specific country they want to compare. As they mouse-over
+	the country, the name and population size appear as a tooltip to
+	allow details on demand about the country. </p>
+
+	<p> The grouped bar chart is linked to the country, so it displays the 
+	birthrate and death rate when that country is clicked. This is also
+	a low-level query action because it allows the user to choose a country
+	based on the hierarchical graph and then allows them to compare the two
+	rates side by side.
+	</section>
+
+<section>
+	<h1> Visualization and Interaction Abstraction </h1>
+	<p> The visualizations are shown using two separate graphs. 
+	The first visualization is a grouped bar chart that allows the user
+	to compare the birthrate and death rate of the selected country. 
+	The second visualization is the hierarchical graph to showing
+	the size of the country based on the size of the population. </p>
+
+	<p> The marks are the circles in the hierarchical graph because they
+	display area. The channels for this graph are the positions of the circle relative
+	to the population size. </p>
+	
+	<p> The marks for the grouped bar chart are the bars that are represented. The 
+	channels are the colors of these bars that allow the user to compare the values. </p>
+	
+	<p> The visualization supports the marks and channels for each graph
+	because they are intuitive to understand. It is easy to tell in the
+	hierarchical graph which countries have the largest population and
+	which countries have a smaller population. The grouped bar chart makes it easy for
+	users to understand what two values are being compared with the color
+	scale and how they compare to each other based on the size of the bar
+	that is created. </p>
+	
+	<p> I choose these marks and channels for the hierarchical graph because I wanted a simple way
+	to represent how countries compare when looking at their population.
+	The circles in the hierarchical graph made this visualization easy
+	for users to understand and interpret. The channels made the position
+	of each circle have a meaning as well. It is easy to tell which countries
+	belong on the same continent and the user can zoom in to see what
+	countries are being represented in the graph. </p>
+
+	<p> I choose the marks and channels for the grouped bar chart because
+	this method made the values easy to compare at first glance. 
+</section>
+
+<section>
+	<h1> Algorithm Abstraction </h1>
+	<p> There was no extra algorithm used in this visualization. </p>
+	
+</section>  
+</head>
+<body>
+
+	<svg width="960" height="500"></svg>
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	<script src="https://d3js.org/d3.v4.js"></script>
+	<script src="./scripts/assignment06.js"></script>
+	<script src="./scripts/linkedGraphic.js"></script>
+
+</body>
+</html>
