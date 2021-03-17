@@ -1,0 +1,13 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<script src="./scripts/d3/d3.v4.js"></script>
+	<script src="./d3js.org/d3.v5.min.js"></script>
+	<script src="./scripts/d3/d3.scale.chromatic.js"></script>
+	<script src="./scripts/d3/d3.topojson.js"></script>
+	<script src="./scripts/d3/d3.queue.js"></script>
+	<script src="./scripts/sacremento_02.js"></script>
+</body>
+</html>
